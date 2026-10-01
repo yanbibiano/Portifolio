@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yan Bibiano · Desenvolvedor Full Stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f0; --ink:#14213d; --muted:#4a5470; --sun:#f2b705; --line:#d9d6c8; --card:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e1526;--ink:#f1efe6;--muted:#a9b2c8;--line:#27324d;--card:#162038}
+}
+:root[data-theme="dark"]{--bg:#0e1526;--ink:#f1efe6;--muted:#a9b2c8;--line:#27324d;--card:#162038}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;margin:0;line-height:1.05}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+nav .links{display:flex;gap:1.25rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:600}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--sun);text-decoration-thickness:3px;text-underline-offset:4px}
+.hero{padding:4rem 0 3.5rem;border-bottom:1px solid var(--line)}
+.hero h1{font-weight:800;font-size:clamp(3.2rem,13vw,8.5rem);letter-spacing:-.04em}
+.hero h1 span{display:block}
+.hero h1 .second{background:linear-gradient(transparent 62%,var(--sun) 62% 92%,transparent 92%);display:inline-block}
+.hero p{max-width:38rem;font-size:1.25rem;color:var(--muted);margin:1.75rem 0 0}
+.cta{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.3rem;border-radius:.4rem;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--sun);border-color:var(--sun);color:#14213d}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+section>h2,.wrap>h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:1.75rem;letter-spacing:-.02em}
+.about{display:grid;gap:1.5rem;max-width:42rem}
+.about h3{font-size:1.15rem;margin-bottom:-.5rem}
+.stack{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:0;list-style:none}
+.stack li{padding:.35rem .8rem;border:1.5px solid var(--ink);border-radius:2rem;font-weight:600;font-size:.95rem}
+.projects{display:grid;gap:1.25rem}
+@media(min-width:48rem){.projects{grid-template-columns:1.4fr 1fr}.projects .big{grid-row:span 2}}
+.proj{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--sun);padding:1.5rem;border-radius:.3rem}
+.proj h3{font-size:1.5rem;margin-bottom:.6rem}
+.proj p{margin:.2rem 0 1rem;color:var(--muted)}
+.tags{font-weight:600;font-size:.95rem}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 1.75rem 1.5rem}
+.timeline li::before{content:"";position:absolute;left:-.65rem;top:.45rem;width:1rem;height:1rem;background:var(--sun);border:3px solid var(--ink);border-radius:50%}
+.timeline strong{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:1.25rem}
+.timeline small{display:block;color:var(--muted)}
+.contact{padding:4rem 0 5rem}
+.contact h2{font-size:clamp(2rem,7vw,4rem)}
+.contact a.mail{font-size:clamp(1.2rem,4.5vw,2rem);font-weight:600;word-break:break-all}
+footer{padding:0 0 2rem;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Principal">
+    <strong>Yan Bibiano</strong>
+    <div class="links"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#trajetoria">Trajetória</a><a href="#contato">Contato</a></div>
+  </nav>
+
+  <header class="hero">
+    <h1><span>Yan</span><span class="second">Bibiano</span></h1>
+    <p>Desenvolvedor full stack júnior em Juazeiro do Norte, Ceará. Construo sistemas web completos, da interface ao banco de dados, e testo o que construo.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projetos">Ver projetos</a>
+      <a class="btn" href="https://github.com/yanbibiano" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/yan-bibiano-6b0b19365/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <div class="about">
+      <p>Estudo Engenharia de Software na Anhanguera e trabalho com tecnologia todos os dias: no suporte de TI de um hotel, no desenvolvimento de um sistema de logística e estoque e em testes automatizados na universidade.</p>
+      <p>Atuo tanto no front-end quanto no back-end: crio interfaces com HTML, CSS, JavaScript e TypeScript, e APIs e regras de negócio com Java, Spring Boot e Node.js, sempre com PostgreSQL por trás. Gosto de transformar rotina de negócio real em software que funciona.</p>
+      <h3>Front-end</h3>
+      <ul class="stack" aria-label="Front-end">
+        <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li>
+      </ul>
+      <h3>Back-end e dados</h3>
+      <ul class="stack" aria-label="Back-end e dados">
+        <li>Java</li><li>Spring Boot</li><li>Node.js</li><li>Python</li><li>PostgreSQL</li>
+      </ul>
+      <h3>Ferramentas</h3>
+      <ul class="stack" aria-label="Ferramentas">
+        <li>Docker</li><li>Git</li><li>Testes automatizados</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projects">
+      <article class="proj big">
+        <h3>GestãoLoja (MarketManagement)</h3>
+        <p>Sistema full stack de gestão para pequenas lojas de varejo, com interface web e back-end próprio. Foi pensado para quem precisa controlar a loja sem planilhas espalhadas.</p>
+        <div class="tags">Full-stack</div>
+        <p style="margin-top:1rem"><a href="https://github.com/yanbibiano/MarketManagement" target="_blank" rel="noopener">Ver código no GitHub</a></p>
+      </article>
+      <article class="proj">
+        <h3>Sistema de logística e estoque</h3>
+        <p>Aplicação web da MasterB1 Suplementos para controlar logística e inventário. Cuido da interface e do banco de dados.</p>
+        <div class="tags">HTML5 · CSS3 · JavaScript · PostgreSQL</div>
+      </article>
+      <article class="proj">
+        <h3>Testes automatizados no SIGAA</h3>
+        <p>Estágio de QA na UFCA, com automação de testes do sistema acadêmico.</p>
+        <div class="tags">Python · Docker</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="trajetoria">
+    <h2>Trajetória</h2>
+    <ol class="timeline">
+      <li><strong>Desenvolvedor Web, MasterB1 Suplementos</strong><small>desde fev/2026</small>Construo e mantenho, de ponta a ponta, o sistema web de logística e gestão de estoque.</li>
+      <li><strong>Estágio em QA e automação, UFCA</strong><small>Juazeiro do Norte, CE</small>Testes do SIGAA com Python e Docker.</li>
+      <li><strong>Jovem Aprendiz de TI, Hotel IU-Á</strong><small>Juazeiro do Norte, CE</small>Suporte e rotina de tecnologia do hotel.</li>
+      <li><strong>Engenharia de Software, Anhanguera</strong><small>em andamento</small>Graduação.</li>
+      <li><strong>Técnico em Informática, E.E.E.P. Aderson Borges de Carvalho</strong><small>concluído</small>Base técnica em programação.</li>
+    </ol>
+  </section>
+
+  <section id="contato" class="contact" style="border-bottom:0">
+    <h2>Vamos conversar?</h2>
+    <p>Estou aberto a vagas e projetos de front-end, back-end ou full stack.</p>
+    <a class="mail" href="mailto:Yanbibiano09@gmail.com">Yanbibiano09@gmail.com</a>
+    <div class="cta">
+      <a class="btn primary" href="https://wa.me/5588996741123" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn" href="https://www.linkedin.com/in/yan-bibiano-6b0b19365/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/yanbibiano" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+  <footer>© 2026 Yan Bibiano · Juazeiro do Norte, CE</footer>
+</div>
+</body>
+</html>
